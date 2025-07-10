@@ -133,3 +133,11 @@ OUTPUT:
 Enter the number with space seperated:  10 22 33 44  55 66 77 88 99
 Even:  5
 Odd:  4
+
+a=int(input())
+expo=lambda a:a**a
+print(expo(a))
+OUTPUT:
+ 3
+27
+
