@@ -102,3 +102,34 @@ OUTPUT:
  12
 Maximum number is:  12
 Minimum number is:  5
+
+def sep(a):
+    e,o=0,0
+    for i in a:
+        if i%2==0:e+=1
+        else:o+=1
+    return e,o 
+a=eval(input("enter num as list type"))
+even,odd=sep(a)
+print("Even: ",even)
+print("odd: ",odd)
+OUTPUT:
+enter num as list type 10 ,22 ,33 ,44  ,55 ,66 ,77 ,88 ,99
+Even:  5
+odd:  4
+
+def sep(num):
+    e,o=0,0
+    for n in num:
+        if n%2==0:e+=1
+        else:o+=1
+    return e,o
+n=input("Enter the number with space seperated: ")
+n_l=list(map(int,n.split()))
+e,o=sep(n_l)
+print("Even: ",e)
+print("Odd: ",o)
+OUTPUT:
+Enter the number with space seperated:  10 22 33 44  55 66 77 88 99
+Even:  5
+Odd:  4
