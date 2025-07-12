@@ -157,3 +157,14 @@ Enter b value: 2
 Addition:  3
 Subtraction:  -1
 Multiplication:  2
+
+def mul_by(x):
+    def inner(n):return x*n
+    return inner
+times_2=mul_by(2)
+times_3=mul_by(3)
+print(times_2(5))
+print(times_3(10))
+OUTPUT:
+10
+30
