@@ -141,3 +141,19 @@ OUTPUT:
  3
 27
 
+def arth(a,b):
+    def add():return a+b
+    def sub():return a-b
+    def mul():return a*b
+    print("Addition: ",add())
+    print("Subtraction: ",sub())
+    print("Multiplication: ",mul())
+a=int(input("Enter a value:"))
+b=int(input("Enter b value:"))
+arth(a,b)
+OUTPUT:
+Enter a value: 1
+Enter b value: 2
+Addition:  3
+Subtraction:  -1
+Multiplication:  2
