@@ -168,3 +168,70 @@ print(times_3(10))
 OUTPUT:
 10
 30
+
+x=100
+y=10
+def display():
+    x=22
+    print("x =",x)
+    print("y =",y)
+    print("Locally x+y =",x+y)
+display()
+y=25
+print("x =",x)
+print("y =",y)
+print("Globally x+y =",x+y)
+OUTPUT:
+x = 22
+y = 10
+Locally x+y = 32
+x = 100
+y = 25
+Globally x+y = 125
+
+total=0
+allsubjects,average=0,0
+def add_subject_marks():
+    global total,allsubjects,average
+    marks=int(input("Enter marks of a subject :"))
+    total+=marks
+    allsubjects+=1
+    average=total/allsubjects
+    return marks
+print("Subject1 marks :",add_subject_marks())
+print("Subject2 marks :",add_subject_marks())
+print("Subject3 marks :",add_subject_marks())
+print("Total marks gained by student :",total)
+print(f"Percentage of the student for the acadamic is : {average:.2f}%")
+OUTPUT:
+Enter marks of a subject : 100
+Subject1 marks : 100
+Enter marks of a subject : 92
+Subject2 marks : 92
+Enter marks of a subject : 88
+Subject3 marks : 88
+Total marks gained by student : 280
+Percentage of the student for the acadamic is : 93.33%
+
+subject_marks=[]
+def add_subject_marks():
+    mark=int(input("Enter marks :"))
+    subject_marks.append(mark)
+    return mark
+all_subjects=int(input("Enter number subjects :"))
+for i in range(all_subjects):
+    print(f"subject {i+1} marks :",add_subject_marks())
+print("all subject marks",subject_marks)
+print("Total marks :",sum(subject_marks))
+print(f"percentage : {sum(subject_marks)/len(subject_marks):.2f}")
+OUTPUT:
+Enter number subjects : 3
+Enter marks : 100
+subject 1 marks : 100
+Enter marks : 92
+subject 2 marks : 92
+Enter marks : 88
+subject 3 marks : 88
+all subject marks [100, 92, 88]
+Total marks : 280
+percentage : 93.33
