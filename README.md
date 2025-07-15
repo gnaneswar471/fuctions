@@ -287,3 +287,13 @@ name:kana
 age:21
 cgpa:8.0
 
+def info(**h):
+    print(f"kes:{h.values()}")
+    for value in h.items():
+        print(value)
+info(name='kana',age=21,cgpa=8.0)
+OUTPUT:
+kes:dict_values(['kana', 21, 8.0])
+('name', 'kana')
+('age', 21)
+('cgpa', 8.0)
