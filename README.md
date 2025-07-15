@@ -261,3 +261,12 @@ print(f"factorial of {num} is {value}")
 OUTPUT:
 Enter a value: 4
 factorial of 4 is 24
+
+def sum(n):
+    if n==0:return 0
+    return n+sum(n-1)
+num=int(input("Enter the number"))
+print(f"sum of first {num} numbres is {sum(num)}")
+OUTPUT:
+Enter the number 5
+sum of first 5 numbres is 15
