@@ -270,3 +270,4 @@ print(f"sum of first {num} numbres is {sum(num)}")
 OUTPUT:
 Enter the number 5
 sum of first 5 numbres is 15
+
