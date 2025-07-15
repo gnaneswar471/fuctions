@@ -235,3 +235,29 @@ subject 3 marks : 88
 all subject marks [100, 92, 88]
 Total marks : 280
 percentage : 93.33
+
+fact=1
+def factorial(num):
+    global fact
+    for i in range(1,num+1):
+        fact*=i
+    return fact
+num=int(input("Enter a number"))
+if num<0:
+    print(f"Can't derive factorial for negative numbers")
+else:
+    factorial(num)
+    print(f"Factorial of {num} is",fact) 
+OUTPUT:
+Enter a number 6
+Factorial of 6 is 720
+
+def factorial(n):
+    if n==0 or n==1:return 1
+    return n*factorial(n-1)
+num=int(input("Enter a value:"))
+value=factorial(num)
+print(f"factorial of {num} is {value}")
+OUTPUT:
+Enter a value: 4
+factorial of 4 is 24
