@@ -278,3 +278,12 @@ print(sumn(1,2,3,4,5,6,7,8,9,10))
 OUTPUT:
 5
 55
+
+def info(**k):
+    for key,v in k.items():print(f"{key}:{v}")
+info(name='kana',age=21,cgpa=8.0)
+OUTPUT:
+name:kana
+age:21
+cgpa:8.0
+
