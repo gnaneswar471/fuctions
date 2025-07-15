@@ -271,3 +271,10 @@ OUTPUT:
 Enter the number 5
 sum of first 5 numbres is 15
 
+def sumn(*args):
+    print(args[4])
+    return sum(args)
+print(sumn(1,2,3,4,5,6,7,8,9,10))
+OUTPUT:
+5
+55
