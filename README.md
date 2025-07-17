@@ -317,3 +317,16 @@ print("sum of digits is:",dsum(num))
 OUTPUT:
 Enter a four digit number: 1234
 sum of digits is: 10
+
+def one(n):
+    if n==0:return True
+  else:return two(n-1)
+def two(n):
+    if n==0:return False
+    else:return one(n-1)
+num=int(input("enter a number:"))
+if one(num):print(num,"is a even number")
+else:print(num,"is a Odd number")
+OUTPUT:
+enter a number: 8
+8 is a even number
