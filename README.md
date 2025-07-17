@@ -297,3 +297,23 @@ kes:dict_values(['kana', 21, 8.0])
 ('name', 'kana')
 ('age', 21)
 ('cgpa', 8.0)
+
+def fib(n):
+    if n<=1:return n
+    else:return fib(n-1)+fib(n-2)
+num=int(input("Enter no of terms to be printed:"))
+for i in range(num):
+    print(fib(i),end=" ")
+OUTPUT:
+Enter no of terms to be printed: 10
+0 1 1 2 3 5 8 13 21 34
+
+def dsum(n):
+    if n==0:return 0
+    return n%10+temp(n//10)
+def temp(n):return dsum(n)
+num=int(input("Enter a four digit number:"))
+print("sum of digits is:",dsum(num))
+OUTPUT:
+Enter a four digit number: 1234
+sum of digits is: 10
