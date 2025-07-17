@@ -24,7 +24,6 @@ OUTPUT:
  5
  6
 sum: 11
-
 '''write a program tha carries and return all the arthemtic operations to the code(+,-,*)
 pass the constraints ,where all the consrains must e calculted acccordingly as return values
 to print by calling same function '''
@@ -330,3 +329,19 @@ else:print(num,"is a Odd number")
 OUTPUT:
 enter a number: 8
 8 is a even number
+
+def A(n):
+    if n<=0:return
+    print("Gopi",n),B(n-1)
+def B(n):
+    if n<=0:return
+    print("Chintu",n),A(n-1)
+num=int(input("Enter a number:"))
+A(num)
+OUTPUT:
+Enter a number: 5
+Gopi 5
+Chintu 4
+Gopi 3
+Chintu 2
+Gopi 1
