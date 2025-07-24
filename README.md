@@ -405,3 +405,33 @@ Binary combinations......
 101
 110
 111'''
+
+#usage of head recursion
+def head(n):
+    if n==0:return
+    head(n-1)
+    print(n)
+num=int(input("Enter a number"))
+head(num)
+'''OUTPUT:
+Enter a number 5
+1
+2
+3
+4
+5'''
+
+#using of tail recursion
+def head(n):
+    if n==0:return
+    print(n)
+    head(n-1)
+num=int(input("Enter a number"))
+head(num)
+OUTPUT:
+Enter a number 5
+5
+4
+3
+2
+1
