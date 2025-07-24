@@ -345,3 +345,36 @@ Chintu 4
 Gopi 3
 Chintu 2
 Gopi 1
+
+def fib(n):
+    if n<=1:return n
+    else:return fib(n-1)+fib(n-2)
+terms=int(input())
+print("fibnnoci series......")
+fiba=[fib(i)for i in range(terms)]
+print(fiba,end='')
+OUTPUT:
+6
+fibnnoci series......
+[0, 1, 1, 2, 3, 5]
+
+'''permuntations of char in tree recursion '''
+def permute(s,bucket=''):
+    if not s:
+        print(bucket)
+        return
+    for i in range(len(s)):
+        ns=s[:i]+s[i+1:]
+        permute(ns,bucket+s[i])
+text=input("enter a word")
+print("posibilities of combinations....")
+permute(text)
+OUTPUT:
+enter a word abc
+posibilities of combinations....
+abc
+acb
+bac
+bca
+cab
+cba
