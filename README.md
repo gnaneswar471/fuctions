@@ -421,6 +421,15 @@ Enter a number 5
 4
 5'''
 
+def sumhead(n):
+    if n==0:return 0
+    return n+sumhead(n-1)
+num=int(input())
+print(sumhead(num))
+OUTPUT:
+ 5
+15
+
 #using of tail recursion
 def head(n):
     if n==0:return
@@ -435,3 +444,12 @@ Enter a number 5
 3
 2
 1
+
+def tailsum(n,temp=0):
+    if n==0:return temp
+    return tailsum(n-1,temp+n)
+num=int(input())
+print(tailsum(num))
+OUTPUT:
+ 5
+15
