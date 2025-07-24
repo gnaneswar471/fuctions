@@ -307,16 +307,18 @@ OUTPUT:
 Enter no of terms to be printed: 10
 0 1 1 2 3 5 8 13 21 34
 
+#sum of n numbers
 def dsum(n):
     if n==0:return 0
     return n%10+temp(n//10)
 def temp(n):return dsum(n)
 num=int(input("Enter a four digit number:"))
 print("sum of digits is:",dsum(num))
-OUTPUT:
+'''OUTPUT:
 Enter a four digit number: 1234
-sum of digits is: 10
+sum of digits is: 10'''
 
+#using nestedd recurion for finding even or odd
 def one(n):
     if n==0:return True
   else:return two(n-1)
@@ -326,10 +328,11 @@ def two(n):
 num=int(input("enter a number:"))
 if one(num):print(num,"is a even number")
 else:print(num,"is a Odd number")
-OUTPUT:
+'''OUTPUT:
 enter a number: 8
-8 is a even number
+8 is a even number'''
 
+#nested recursion for assinging number to different names
 def A(n):
     if n<=0:return
     print("Gopi",n),B(n-1)
@@ -338,14 +341,15 @@ def B(n):
     print("Chintu",n),A(n-1)
 num=int(input("Enter a number:"))
 A(num)
-OUTPUT:
+'''OUTPUT:
 Enter a number: 5
 Gopi 5
 Chintu 4
 Gopi 3
 Chintu 2
-Gopi 1
+Gopi 1'''
 
+#fibnocci series using recursion
 def fib(n):
     if n<=1:return n
     else:return fib(n-1)+fib(n-2)
@@ -353,11 +357,12 @@ terms=int(input())
 print("fibnnoci series......")
 fiba=[fib(i)for i in range(terms)]
 print(fiba,end='')
-OUTPUT:
+'''OUTPUT:
 6
 fibnnoci series......
-[0, 1, 1, 2, 3, 5]
+[0, 1, 1, 2, 3, 5]'''
 
+#permutation combinations
 '''permuntations of char in tree recursion '''
 def permute(s,bucket=''):
     if not s:
@@ -369,7 +374,7 @@ def permute(s,bucket=''):
 text=input("enter a word")
 print("posibilities of combinations....")
 permute(text)
-OUTPUT:
+'''OUTPUT:
 enter a word abc
 posibilities of combinations....
 abc
@@ -377,4 +382,26 @@ acb
 bac
 bca
 cab
-cba 
+cba '''
+
+#binary value generaor
+def binary(l,b=''):
+    if l==0:
+        print(b)
+        return
+    binary(l-1,b+'0')
+    binary(l-1,b+'1')
+length=int(input("Enter length of string:"))
+print("Binary combinations......")
+binary(length)
+'''OUTPUT:
+Enter length of string: 3
+Binary combinations......
+000
+001
+010
+011
+100
+101
+110
+111'''
